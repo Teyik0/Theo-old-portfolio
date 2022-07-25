@@ -1,0 +1,14 @@
+.portfolio {
+
+    background-color: rgb(33, 33, 35);
+    justify-content: center;
+
+    .project-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin: 1rem auto;
+    }
+}

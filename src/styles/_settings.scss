@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Roboto:wght@300;400&display=swap');
+
+$font-1: 'Roboto', sans-serif;
+$font-2: 'Mukta', sans-serif;
+
+$color-1: #141414;
+$color-2: #4d4325;
+$white: #d8e0e7;
+$black: #1e1e20;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $black;
+    font-family: $font-1;
+    color: $white;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+}
+a:hover {
+    color: aqua;
+}
+
+.home, .aboutMe, .portfolio, .contact {
+    display: flex;
+
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
+}
+
+.navBar {
+    background-color: $color-1;
+}

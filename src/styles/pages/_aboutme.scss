@@ -1,0 +1,75 @@
+p {
+    text-align: justify;
+}
+
+.aboutme {
+
+    margin: 1rem 3rem;
+    display: grid;
+    align-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "area1 area1 area2"
+    "area3 area4 area4"
+    "area5 area5 area6"
+    "area7 area8 area8"
+    "area9 area9 area10";
+
+    a {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+    }
+
+    .block {
+        background-color: rgb(40, 40, 38);
+        border-radius: 20px;
+        padding: 1rem 1rem;
+        margin: .5rem .5rem
+    }
+    .p1 {
+        grid-area: area1;
+    }
+    .img-motherboard {
+        background-image: url("../../assets/img-motherboard.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-area: area2;
+    }
+    .p2 {
+        grid-area: area4;
+    }
+    .img-setup {
+        background-image: url("../../assets/img-setup.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-area: area3;
+    }
+    .p3 {
+        grid-area: area5;
+    }
+    .img-robotique {
+        background-image: url("../../assets/img-robotique.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-area: area6;
+    }
+    .p4 {
+        grid-area: area8;
+    }
+    .img-trading {
+        background-image: url("../../assets/img-trading.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-area: area7;
+    }
+    .p6 {
+        grid-area: area9;
+    }
+    .img-iot {
+        background-image: url("../../assets/img-iot.jpg");
+        background-position: center;
+        background-size: cover;
+        grid-area: area10;
+    }
+}

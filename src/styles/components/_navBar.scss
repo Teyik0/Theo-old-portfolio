@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.nav-item {
+    font-family: 'Saira';
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0rem 1.2rem;
+}
+.nav-item a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+a:hover{
+    color: rgb(117, 71, 13);
+    text-underline-offset: 10px;
+    transition: 0.4s;
+}

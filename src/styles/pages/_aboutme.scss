@@ -73,3 +73,29 @@ p {
         grid-area: area10;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .aboutme {
+        margin: 1rem .5rem;
+        .block {
+            background-color: rgb(40, 40, 38);
+            border-radius: 20px;
+        }
+        .img-trading {
+            background-position: left;
+            background-size: cover;
+        }
+        .img-robotique {
+            background-position: left;
+            background-size: cover;
+        }
+        .img-setup {
+            background-position: center;
+            background-size: cover;
+        }
+        .img-motherboard {
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

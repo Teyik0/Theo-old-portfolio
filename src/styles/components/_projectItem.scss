@@ -139,3 +139,42 @@ $height: 220px;
     visibility: hidden;
     opacity: 0.8;
 }
+
+@media screen and (max-width: 600px) {
+    $width: 300px;
+    $height: 140px;
+
+    .project-item {
+        width: $width;
+        height: $height;
+    }
+    .Robot {
+        width: $width;
+        height: $height;
+    }
+    .Laser {
+        width: $width;
+        height: $height;
+    }
+    .Vidéo {
+        width: $width;
+        height: $height;
+    }
+    .ListX {
+        width: $width;
+        height: $height;
+    }
+    .site {
+        width: $width;
+        height: $height;
+    }
+
+    .project-item::before {
+        width: $width;
+        height: $height;
+    }   
+    .project-item::after {
+        width: $width;
+        height: $height;
+    }
+}

@@ -5,7 +5,7 @@
     .img-cover {
         width: 100%;
         height: 80vh;
-        background-image: url("../../assets/cover.jpg");
+        background-image: url("../../assets/cover.webp");
         background-size: cover;
     }
 
@@ -61,3 +61,46 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .home {
+        .skills {
+            margin: 1rem;
+        }
+        .skill-list {
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+
+        .presentation {
+            flex-direction: column;
+            align-content: center;
+
+            .profile-picture {
+                align-self: center;
+                margin: 0;
+                padding: 0;
+                width: 90%;
+            }
+
+            .description {
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .home {
+
+        .img-cover {
+            width: 100%;
+            height: 80vh;
+            background-image: url("../../assets/cover.webp");
+            background-size: cover;
+            background-position: left;
+        }
+    }
+}

@@ -1,14 +1,42 @@
 import React, { useState } from "react";
 
-function ProjectItem({ name, type, langage, category, cover }) {
+function ProjectItem({ name, type, langage, category, cover, content }) {
+  const [typeItem, setType] = useState("");
+  const [categoryItem, setCat] = useState("");
+  const [contentItem, setContent] = useState("");
+  const [langageItem, setLangage] = useState("");
+
+  const setHover = function () {
+    setCat("catégorie : " + category);
+    setType("type : " + type);
+    setLangage("langage : " + langage);
+    setContent("description : " + content);
+  };
+  const resetHover = function () {
+    setType("");
+    setCat("");
+    setContent("");
+    setLangage("");
+  };
+
   return (
-    <div>
-      <li key={name} className="project-item">
+    <li key={name} className="project-item-content">
+      <div
+        className="project-item"
+        onMouseOverCapture={setHover}
+        onMouseOutCapture={resetHover}
+      >
         <div className={name}>
-          <span className="test">{name}</span>
+          <span className="project-name">{name}</span>
         </div>
-      </li>
-    </div>
+      </div>
+      <div className="project-content">
+        <span className="category">{categoryItem}</span>
+        <span className="type">{typeItem}</span>
+        <span className="langage">{langageItem}</span>
+        <span className="desc">{contentItem}</span>
+      </div>
+    </li>
   );
 }
 

@@ -9,13 +9,14 @@ import Portfolio from "./pages/Portfolio";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/qui-suis-je" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/" element={<NavBar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="qui-suis-je" element={<AboutMe />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

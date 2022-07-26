@@ -6,17 +6,20 @@ function Portfolio() {
     <div className="portfolio">
       <div>
         <ul className="project-list">
-          {ProjectList.map(({ name, type, langage, category, cover }) => {
-            return (
-              <ProjectItem
-                name={name}
-                type={type}
-                langage={langage}
-                categroy={category}
-                cover={cover}
-              />
-            );
-          })}
+          {ProjectList.map(
+            ({ name, type, langage, category, cover, content }) => {
+              return (
+                <ProjectItem
+                  name={name}
+                  type={type}
+                  langage={langage}
+                  category={category}
+                  cover={cover}
+                  content={content}
+                />
+              );
+            }
+          )}
         </ul>
       </div>
     </div>

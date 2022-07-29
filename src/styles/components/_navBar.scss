@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 1.5rem;
+    background-color: rgb(24, 25, 25);
 }
 
 .nav-item {
@@ -14,8 +15,6 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 0rem 1.2rem;
-}
-.nav-item a {
     text-decoration: underline;
     text-underline-offset: 3px;
 }

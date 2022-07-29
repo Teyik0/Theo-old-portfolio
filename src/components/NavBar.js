@@ -4,29 +4,19 @@ import "../styles/components/_navBar.scss";
 export default function NavBar() {
   return (
     <div className="navbar-content">
-      <nav className="navBar">
-        <ul className="nav-list">
-          <li className="nav-item">
-            <Link to="/">
-              <h2>Accueil</h2>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="qui-suis-je">
-              <h2>Qui suis-je ?</h2>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="portfolio">
-              <h2>Portfolio</h2>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="contact">
-              <h2>Contact</h2>
-            </Link>
-          </li>
-        </ul>
+      <nav className="nav-list">
+        <Link className="nav-item" to="/">
+          <h2>Accueil</h2>
+        </Link>
+        <Link className="nav-item" to="qui-suis-je">
+          <h2>Qui suis-je ?</h2>
+        </Link>
+        <Link className="nav-item" to="portfolio">
+          <h2>Portfolio</h2>
+        </Link>
+        <Link className="nav-item" to="contact">
+          <h2>Contact</h2>
+        </Link>
       </nav>
       <Outlet />
     </div>

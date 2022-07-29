@@ -51,9 +51,9 @@ function Home() {
             className="profile-picture"
             src={photo}
             alt="profile"
-            width="33%"
+            height="450px"
           />
-          <div class="description">
+          <div className="description">
             <p>
               Passionné d’électronique et d’informatique, je suis un « touche à
               tout » qui aime apprendre en autodidacte.
@@ -70,7 +70,7 @@ function Home() {
               Admis à l’
               <a
                 target="_blank"
-                class="esgi"
+                className="esgi"
                 href="https://www.esgi.fr/"
                 rel="noreferrer"
               >

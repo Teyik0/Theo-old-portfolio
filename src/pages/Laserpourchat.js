@@ -12,7 +12,7 @@ function laserpourchat() {
           dont les chats raffolent.
           <iframe
             className="video-laserpourchat"
-            title="ListX - Vidéo"
+            title="Laser pour chat - Vidéo"
             src="https://www.youtube.com/embed/rzP0c3chPj8"
             frameborder="0"
             width="50%"

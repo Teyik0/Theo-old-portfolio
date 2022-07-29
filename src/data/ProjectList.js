@@ -43,7 +43,7 @@ export const ProjectList = [
   },
   {
     name: "Ce site web",
-    id: "thiswebsite",
+    id: "home",
     type: "application web",
     langage: "reactjs",
     category: "programmation",

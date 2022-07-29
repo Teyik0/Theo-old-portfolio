@@ -1,28 +1,28 @@
-p {
-    text-align: justify;
-}
-
 .laserpourchat-content {
 
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 
     h1 {
-        margin: 1rem 3rem;
-        padding: 0rem 6rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
         text-decoration: underline;
         text-underline-offset: 3px;
     }
 
     .laserpourchat-description {
-        margin: 1rem 3rem;
+        margin: 0rem 3rem;
         display: grid;
         align-content: center;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
         "area1 area2 area2"
-        "area3 area3 area4";
+        "area3 area3 area4"
+        "area5 area6 area7";
 
         .block {
             background-color: rgb(40, 40, 38);
@@ -60,6 +60,36 @@ p {
             align-self: center;
             margin-top: 1rem;
             border-radius: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .laserpourchat-content{
+        width: 100%;
+        margin: 0rem;
+        h1 {
+            font-size: 26px;
+        }
+        .laserpourchat-description {
+            margin: 0rem 1rem;
+            padding: 0rem;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .laserpourchat-content{
+        width: 100%;
+        margin: 0rem;
+        h1 {
+            font-size: 22px;
+        }
+        .laserpourchat-description {
+            display: flex;
+            flex-direction: column;
+            margin: 0rem 1rem;
+            padding: 0rem;
         }
     }
 }

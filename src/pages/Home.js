@@ -11,17 +11,38 @@ function Home() {
         <div className="skills">
           <h3>Compétences</h3>
           <ul className="skill-list">
-            {SkillsList.map(({ skillName, logo, category, type, niveau }) => {
-              return (
-                <SkillItem
-                  skillName={skillName}
-                  logo={logo}
-                  category={category}
-                  type={type}
-                  niveau={niveau}
-                />
-              );
-            })}
+            {SkillsList.map(
+              ({ skillName, logo, category, type, niveau, link }) => {
+                if (link !== "none") {
+                  return (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={skillName}
+                    >
+                      <SkillItem
+                        skillName={skillName}
+                        logo={logo}
+                        category={category}
+                        type={type}
+                        niveau={niveau}
+                      />
+                    </a>
+                  );
+                } else
+                  return (
+                    <SkillItem
+                      key={skillName}
+                      skillName={skillName}
+                      logo={logo}
+                      category={category}
+                      type={type}
+                      niveau={niveau}
+                    />
+                  );
+              }
+            )}
           </ul>
         </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ProjectItem({ name, type, langage, category, cover, content }) {
+function ProjectItem({ name, type, langage, category, id }) {
   const [typeItem, setType] = useState("");
   const [categoryItem, setCat] = useState("");
   const [contentItem, setContent] = useState("");
@@ -10,7 +10,6 @@ function ProjectItem({ name, type, langage, category, cover, content }) {
     setCat("catégorie : " + category);
     setType("type : " + type);
     setLangage("langage : " + langage);
-    setContent("description : " + content);
   };
   const resetHover = function () {
     setType("");
@@ -20,7 +19,7 @@ function ProjectItem({ name, type, langage, category, cover, content }) {
   };
 
   return (
-    <li key={name} className="project-item-content">
+    <li key={id} className="project-item-content">
       <div
         className="project-item"
         onMouseOverCapture={setHover}

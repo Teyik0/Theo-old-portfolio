@@ -7,47 +7,47 @@ import coverSiteWebTheo from "../assets/projets/siteweb/sitewebtheo.webp";
 export const ProjectList = [
   {
     name: "Robot suiveur",
+    id: "robotsuiveur",
     type: "robot",
     langage: "c",
     category: "arduino",
     cover: coverRobotSuiveur,
-    content:
-      "Le robot doit suivre l'utilisateur, en plus d'être capable d'éviter tout potentiel obstacle. Le suivit de l'utilisateur via l'intermédiaire de modules Bluetooth.",
+    videolink: "none",
   },
   {
     name: "Laser automatique pour chat",
+    id: "laserchat",
     type: "robot",
     langage: "c",
     category: "arduino",
     cover: coverLaserChat,
-    content:
-      "Votre chat s'ennuie et vous n'avez pas assez de temps à lui consacrer pour jouer ? Le laser pour chat répond à cette problématique. Celui-ci permet de simuler une aire de jeux sur un demie-cercle et imite les mouvements d'un humain pointant un laser sur le sol. ",
+    videolink: "https://www.youtube.com/shorts/rzP0c3chPj8",
   },
   {
     name: "ListX - Base de donnée utilisateur",
+    id: "listx",
     type: "logiciel",
     langage: "c++",
     category: "programmation",
     cover: coverListX,
-    content:
-      "ListX est une application créée entièrement en C++ via le framework Qt. Cette application est une base de données utilisateurs. En effet, celle-ci, conçue initialement pour le bureau des élèves dont je faisais partie devait permettre de recenser la liste des adhérents.",
+    videolink: "https://www.youtube.com/watch?v=cHFLe5QYoQU",
   },
   {
     name: "Vidéo pour Connect Innov",
+    id: "videoconnectinnov",
     type: "vidéo",
     langage: "none",
     category: "audiovisuel",
     cover: coverMontageCI,
-    content:
-      "Pour mon stage de fin d'étude, j'ai réalisé pour mon entreprise Connect innov une vidéo de présentation au format vertical",
+    videolink: "https://www.youtube.com/watch?v=JS38BR8cu88",
   },
   {
     name: "Ce site web",
+    id: "thiswebsite",
     type: "application web",
     langage: "reactjs",
     category: "programmation",
     cover: coverSiteWebTheo,
-    content:
-      "En vu de mon année à venir à l'ESGI, j'ai créé mon site web afin de montrer mes acquis et trouver une alternance.",
+    videolink: "none",
   },
 ];

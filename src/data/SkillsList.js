@@ -20,6 +20,7 @@ export const SkillsList = [
     type: "gestion",
     niveau: "avancé",
     logo: logoGithub,
+    link: "https://github.com/Teyik0",
   },
   {
     skillName: "c / c++",
@@ -27,6 +28,7 @@ export const SkillsList = [
     type: "langage",
     niveau: "avancé",
     logo: logoCplusplus,
+    link: "none",
   },
   {
     skillName: "javascript",
@@ -34,6 +36,7 @@ export const SkillsList = [
     type: "langage",
     niveau: "intermédiaire",
     logo: logoJavascript,
+    link: "none",
   },
   {
     skillName: "html",
@@ -41,6 +44,7 @@ export const SkillsList = [
     type: "langage",
     niveau: "avancé",
     logo: logoHtml,
+    link: "none",
   },
   {
     skillName: "css",
@@ -48,6 +52,7 @@ export const SkillsList = [
     type: "langage",
     niveau: "avancé",
     logo: logoCss,
+    link: "none",
   },
   {
     skillName: "solidity",
@@ -55,6 +60,7 @@ export const SkillsList = [
     type: "langage",
     niveau: "intermédiaire",
     logo: logoSolidity,
+    link: "none",
   },
   {
     skillName: "qt",
@@ -62,6 +68,7 @@ export const SkillsList = [
     type: "framework/bibliothèque",
     niveau: "avancé",
     logo: logoQt,
+    link: "none",
   },
   {
     skillName: "reactjs",
@@ -69,6 +76,7 @@ export const SkillsList = [
     type: "framework/bibliothèque",
     niveau: "intermédiaire",
     logo: logoReact,
+    link: "none",
   },
   {
     skillName: "wordpress",
@@ -76,6 +84,7 @@ export const SkillsList = [
     type: "framework/bibliothèque",
     niveau: "avancé",
     logo: logoWordpress,
+    link: "none",
   },
   {
     skillName: "solidworks",
@@ -83,6 +92,7 @@ export const SkillsList = [
     type: "modélisation 3D",
     niveau: "avancé",
     logo: logoSolidworks,
+    link: "none",
   },
   {
     skillName: "cura",
@@ -90,6 +100,7 @@ export const SkillsList = [
     type: "impression 3D",
     niveau: "avancé",
     logo: logoCura,
+    link: "none",
   },
   {
     skillName: "premiere pro",
@@ -97,6 +108,7 @@ export const SkillsList = [
     type: "montage vidéo",
     niveau: "avancé",
     logo: logoPremierePro,
+    link: "none",
   },
   {
     skillName: "word",
@@ -104,6 +116,7 @@ export const SkillsList = [
     type: "document",
     niveau: "avancé",
     logo: logoWord,
+    link: "none",
   },
   {
     skillName: "excel",
@@ -111,5 +124,6 @@ export const SkillsList = [
     type: "gestion",
     niveau: "avancé",
     logo: logoExcel,
+    link: "none",
   },
 ];

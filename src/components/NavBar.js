@@ -12,17 +12,17 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/qui-suis-je">
+            <Link to="qui-suis-je">
               <h2>Qui suis-je ?</h2>
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/portfolio">
+            <Link to="portfolio">
               <h2>Portfolio</h2>
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact">
+            <Link to="contact">
               <h2>Contact</h2>
             </Link>
           </li>

@@ -7,17 +7,31 @@ function Portfolio() {
       <div>
         <ul className="project-list">
           {ProjectList.map(
-            ({ name, type, langage, category, cover, content }) => {
-              return (
-                <ProjectItem
-                  name={name}
-                  type={type}
-                  langage={langage}
-                  category={category}
-                  cover={cover}
-                  content={content}
-                />
-              );
+            ({ name, type, langage, category, videolink, id }) => {
+              if (videolink !== "none") {
+                return (
+                  <a href={videolink} key={id} target="_blank" rel="noreferrer">
+                    <ProjectItem
+                      name={name}
+                      type={type}
+                      langage={langage}
+                      category={category}
+                      videolink={videolink}
+                    />
+                  </a>
+                );
+              } else {
+                return (
+                  <ProjectItem
+                    name={name}
+                    type={type}
+                    langage={langage}
+                    category={category}
+                    videolink={videolink}
+                    key={id}
+                  />
+                );
+              }
             }
           )}
         </ul>

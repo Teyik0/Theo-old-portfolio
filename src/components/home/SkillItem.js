@@ -17,7 +17,7 @@ function SkillItem({ skillName, logo, category, type, niveau }) {
     setSkill(test + skillName);
     setCat("catégorie : " + category);
     setType("type : " + type);
-    setNiveau("niveau : " + niveau);
+    setNiveau("maîtrise : " + niveau);
   };
   const resetHover = function () {
     setSkill("");

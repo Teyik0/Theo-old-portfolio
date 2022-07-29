@@ -16,7 +16,7 @@ export const ProjectList = [
   },
   {
     name: "Laser automatique pour chat",
-    id: "laserchat",
+    id: "laserpourchat",
     type: "robot",
     langage: "c",
     category: "arduino",

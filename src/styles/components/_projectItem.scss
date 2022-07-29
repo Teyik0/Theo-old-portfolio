@@ -1,12 +1,12 @@
-$width: 380px;
-$height: 220px;
+$width: 360px;
+$height: 200px;
 
 .project-item-content {
     position: relative;
 }
 
 .project-item {
-    margin: 1rem 1rem;
+    margin: 1rem .25rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -95,7 +95,7 @@ $height: 220px;
     transform: translate(100%, 0%);
     border-top-left-radius: 80%;
     border-top-right-radius: 80%;
-    transition: all 1s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 .project-item:hover::before {
@@ -121,7 +121,7 @@ $height: 220px;
     left: 0px;
     top: 0px;
     transform: translate(0%, -100%);
-    transition: all 1.3s ease-in-out;
+    transition: all .6s ease-in-out;
     opacity: .7;
 }
 

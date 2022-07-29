@@ -1,0 +1,65 @@
+p {
+    text-align: justify;
+}
+
+.laserpourchat-content {
+
+    display: block;
+    width: 100%;
+
+    h1 {
+        margin: 1rem 3rem;
+        padding: 0rem 6rem;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .laserpourchat-description {
+        margin: 1rem 3rem;
+        display: grid;
+        align-content: center;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "area1 area2 area2"
+        "area3 area3 area4";
+
+        .block {
+            background-color: rgb(40, 40, 38);
+            border-radius: 20px;
+            padding: 1rem 1rem;
+            margin: .5rem .5rem
+        }
+
+        .img {
+            height: 250px;
+        }
+
+        .p1 {
+            grid-area: area2;
+            display: flex;
+            flex-direction: column;
+        }
+        .laserpourchat1 {
+            background-image: url("../../assets/projets/laser_chat/laserchat1.jpg");
+            background-position: center;
+            background-size: cover;
+            grid-area: area1;
+        }
+        .p2 {
+            grid-area: area3;
+        }
+        .laserpourchat2 {
+            background-image: url("../../assets/projets/laser_chat/laserchat2.jpg");
+            background-position: center;
+            background-size: cover;
+            grid-area: area4;
+        }
+
+        .video-laserpourchat {
+            align-self: center;
+            margin-top: 1rem;
+            border-radius: 20px;
+        }
+    }
+}

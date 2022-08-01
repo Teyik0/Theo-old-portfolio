@@ -11,7 +11,13 @@ function Portfolio() {
             ({ name, type, langage, category, videolink, id }) => {
               if (id === "videoconnectinnov") {
                 return (
-                  <a key={id} href={videolink} target="_blank" rel="noreferrer">
+                  <a
+                    key={id}
+                    href={videolink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="nav-item"
+                  >
                     <ProjectItem
                       name={name}
                       type={type}

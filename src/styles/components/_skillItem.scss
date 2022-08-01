@@ -44,3 +44,41 @@
     margin-left: 3.9px;
     padding-left: 8px;
 }
+
+@media screen and (max-width: 1500px) {
+    .info-skill-item{
+        width: 180px;
+        padding-left: 5px;
+        .category {
+            font-size: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .info-skill-item{
+        width: 140px;
+        padding-left: 5px;
+        font-size: 12px;
+        .category {
+            font-size: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info-skill-item{
+        font-size: 12px;
+        padding: 0px 5px;
+        width: 105px;
+        overflow: hidden;
+        .type {
+            visibility:hidden;
+            font-size: 0px;
+        }
+        .category {
+            visibility: hidden;
+            font-size: 0px;
+        }
+    }
+}

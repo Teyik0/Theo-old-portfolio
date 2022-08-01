@@ -38,7 +38,7 @@
         flex-direction: row;
 
         .profile-picture {
-            margin-left: 3rem;
+            margin-left: 1rem;
             border-radius: 20px;
             opacity: .5;
             margin-bottom: 2rem;
@@ -46,8 +46,8 @@
 
         .description {
             text-align: justify;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
             margin-bottom: 2rem;
             padding: 2rem;
             background-color: rgb(17, 17, 17);
@@ -61,18 +61,47 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1500px) {
     .home {
         .img-cover {
-            background-position: 40% 0%;
+            margin-top: 1rem;
+            background-position: center;
+            border-radius: 20px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: auto;
         }
     
         .skills {
-            margin: 1rem;
+            margin: 1rem 1rem;
         }
         .skill-list {
-            margin-left: 5rem;
-            margin-right: 5rem;
+            margin-left: 7rem;
+            margin-right: 7rem;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home {
+
+        .img-cover {
+            width: auto;
+            height: 65vh;
+            border-radius: 20px;
+            margin-top: 1rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            background-image: url("../../assets/cover-mobile.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .skill-list {
+            margin-left: 3rem;
+            margin-right: 3rem;
+            width: auto;
         }
     }
 }
@@ -80,33 +109,50 @@
 @media screen and (max-width: 750px) {
     .home {
         .presentation {
-            flex-direction: column-reverse;
-            align-content: center;
-
             .profile-picture {
                 align-self: center;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 margin-top: 0;
-                margin-left: 0;
+                margin-left: 1rem;
                 padding: 0;
-                height: 400px;
+                height: 500px;
             }
 
             .description {
-                margin-top: 1rem;
+                margin-top: 0rem;
                 margin-left: 1rem;
                 margin-right: 1rem;
+                margin-bottom: 1rem;
             }
         }
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     .home {
-
         .img-cover {
-            background-position: 25% 0%;
+            width: auto;
+            height: 65vh;
+            border-radius: 20px;
+            margin-top: 1rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            background-image: url("../../assets/cover-mobile.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .skill-list {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .presentation {
+            flex-direction: column;
+            align-content: center;
+            .profile-picture {
+                height: 400px;
+            }
         }
     }
 }

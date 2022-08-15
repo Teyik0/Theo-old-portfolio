@@ -1,6 +1,6 @@
 import SkillItem from "../components/home/SkillItem.js";
 import { SkillsList } from "../data/SkillsList.js";
-import photo from "../assets/photo.jpg";
+import photo from "../assets/photo cv.jpg";
 import { Link } from "react-router-dom";
 
 function Home() {

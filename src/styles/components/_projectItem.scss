@@ -68,6 +68,15 @@ $height: 200px;
     position: relative;
 }
 
+.Tic {
+    background-image: url("../../assets/projets/tictactoe/tictactoe.png");
+    background-position: top;
+    background-size: cover;
+    width: $width;
+    height: $height;
+    position: relative;
+}
+
 .project-name {
     position: absolute;
     bottom: 0;

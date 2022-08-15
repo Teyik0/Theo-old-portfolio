@@ -28,6 +28,26 @@ function Portfolio() {
                     />
                   </a>
                 );
+              }
+              if (id === "tictactoe") {
+                return (
+                  <a
+                    key={id}
+                    href={videolink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="nav-item"
+                  >
+                    <ProjectItem
+                      name={name}
+                      type={type}
+                      langage={langage}
+                      category={category}
+                      videolink={videolink}
+                      key={id}
+                    />
+                  </a>
+                );
               } else {
                 return (
                   <Link key={id} className="nav-item" to={"/portfolio/" + id}>

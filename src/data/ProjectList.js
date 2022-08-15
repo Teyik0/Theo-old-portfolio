@@ -3,6 +3,7 @@ import coverLaserChat from "../assets/projets/laser_chat/laserchat.png";
 import coverListX from "../assets/projets/listx/listx.png";
 import coverMontageCI from "../assets/projets/montage/connectinnov.jpg";
 import coverSiteWebTheo from "../assets/projets/siteweb/sitewebtheo.webp";
+import coverTicTacToe from "../assets/projets/tictactoe/tictactoe.png";
 
 export const ProjectList = [
   {
@@ -49,5 +50,14 @@ export const ProjectList = [
     category: "programmation",
     cover: coverSiteWebTheo,
     videolink: "none",
+  },
+  {
+    name: "Tic Tac Toe",
+    id: "tictactoe",
+    type: "application web",
+    langage: "reactjs",
+    category: "programmation",
+    cover: coverTicTacToe,
+    videolink: "https://complete-tictactoe-game.netlify.app/",
   },
 ];

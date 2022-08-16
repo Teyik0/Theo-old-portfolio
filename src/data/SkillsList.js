@@ -6,7 +6,7 @@ import logoCss from "../assets/icons/logo-css.svg";
 import logoSolidity from "../assets/icons/logo-solidity.svg";
 import logoQt from "../assets/icons/logo-qt.svg";
 import logoReact from "../assets/icons/logo-react.svg";
-import logoWordpress from "../assets/icons/logo-wordpress.svg";
+import logoWordpress from "../assets/icons/logo-wordpress1.svg";
 import logoSolidworks from "../assets/icons/logo-solidworks.svg";
 import logoCura from "../assets/icons/logo-cura.png";
 import logoPremierePro from "../assets/icons/logo-premierepro.svg";

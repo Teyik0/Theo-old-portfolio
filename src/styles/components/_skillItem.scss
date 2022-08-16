@@ -12,7 +12,6 @@
     height: 70px;
     background-color: rgb(41, 41, 45);
     overflow: hidden;
-    cursor: pointer;
     position: relative;
     z-index: 0;
 }
@@ -43,6 +42,7 @@
     border-radius: 10px;
     margin-left: 3.9px;
     padding-left: 8px;
+
 }
 
 @media screen and (max-width: 1500px) {

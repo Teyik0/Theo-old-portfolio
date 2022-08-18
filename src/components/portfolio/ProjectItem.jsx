@@ -115,6 +115,11 @@ const Container = styled.div`
   &:hover:after {
     transform: translate(0%, 0%);
   }
+
+  @media screen and (max-width: 650px) {
+    width: 320px;
+    height: 160px;
+  }
 `;
 
 const Title = styled.span`

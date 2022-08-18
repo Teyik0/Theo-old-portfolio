@@ -54,4 +54,10 @@ const Font = styled.h2`
     text-underline-offset: 15px;
     transition: 0.4s;
   }
+  @media screen and (max-width: 650px) {
+    &:hover {
+      color: rgb(117, 71, 13);
+      text-underline-offset: 3px;
+    }
+  }
 `;

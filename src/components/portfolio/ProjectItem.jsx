@@ -1,29 +1,20 @@
 import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 
-function ProjectItem({ name, type, langage, category, id }) {
+import enSavoirPlusIcon from "../../assets/ajouter.png";
+
+function ProjectItem({ name, type, langage, category, id, cover }) {
   const [info, setInfo] = useState(false);
 
   return (
     <Fragment>
-      <div
-        className="project-item"
+      <Container
         onMouseOverCapture={() => setInfo(true)}
         onMouseOutCapture={() => setInfo(false)}
       >
-        <div className={name}>
-          <span className="project-name">{name}</span>
-        </div>
-      </div>
-
-      {/* <Container
-        onMouseOverCapture={() => setInfo(true)}
-        onMouseOutCapture={() => setInfo(false)}
-      >
-        <div className={name}>
-          <span className="project-name">{name}</span>
-        </div>
-      </Container> */}
+        <img src={cover} alt="project-cover" height="200px" width="360px" />
+        <Title>{name}</Title>
+      </Container>
 
       {/* {info ? (
         <div className="project-content">
@@ -42,20 +33,19 @@ export default ProjectItem;
 //STYLE
 
 const Container = styled.div`
-  $width: 360px;
-  $height: 200px;
-
-  margin: 1rem 0.25rem;
-  display: flex;
-  flex-direction: column;
+  margin: 2rem 1rem;
   border-radius: 10px;
-  width: $width;
-  height: $height;
+  width: 360px;
+  height: 200px;
   cursor: pointer;
+
   overflow: hidden;
   position: relative;
-  transition: all 0.4s ease-in-out;
   z-index: 0;
+
+  /* background-image: url();
+  background-position: center;
+  background-size: cover; */
 
   &:hover {
     transition: all 0.4s ease-in-out;
@@ -68,44 +58,60 @@ const Container = styled.div`
     content: "";
     position: absolute;
     background-color: rgb(117, 161, 161);
-    width: $width;
-    height: $height;
-    left: 0px;
-    top: 0px;
+    width: 360px;
+    height: 200px;
     transform: translate(100%, 0%);
     border-top-left-radius: 80%;
     border-top-right-radius: 80%;
-    transition: all 0.6s ease-in-out;
+    transition: 0.3s ease-in;
   }
-  &:before {
+  &:hover:before {
     transform: translate(0%, 0%);
     border-radius: 0px;
   }
 
   &:after {
-    color: black;
-    z-index: -1;
+    z-index: 1;
     content: "En savoir plus";
+    position: absolute;
+
+    color: black;
     font-size: large;
     text-transform: uppercase;
     font-weight: 1000;
     text-align: left;
-    background: url("../../assets/ajouter.png");
+
+    background: url(${enSavoirPlusIcon});
     background-size: 20%;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    width: $width;
-    height: $height;
+    width: 360px;
+    height: 200px;
     left: 0px;
     top: 0px;
-    transform: translate(0%, -100%);
-    transition: all 0.6s ease-in-out;
+    transform: translate(100%, 0%);
+    transition: all 0.4s ease-in-out;
     opacity: 0.7;
   }
-
-  &:after {
-    z-index: 1;
+  &:hover:after {
     transform: translate(0%, 0%);
   }
+`;
+
+const Title = styled.span`
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 20px;
+  border-color: rgb(28, 28, 26);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: rgb(28, 28, 26);
+  font-family: "Saira";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
 `;

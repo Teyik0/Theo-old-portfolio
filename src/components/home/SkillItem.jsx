@@ -74,14 +74,8 @@ const SkillInfo = styled.div`
   padding-left: 8px;
 
   @media screen and (max-width: 1500px) {
-    width: 180px;
+    width: 160px;
     padding-left: 5px;
-  }
-
-  @media screen and (max-width: 1000px) {
-    width: 140px;
-    padding-left: 5px;
-    font-size: 12px;
   }
 
   @media screen and (max-width: 600px) {

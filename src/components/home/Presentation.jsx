@@ -85,4 +85,8 @@ const Desc = styled.div`
   @media screen and (max-width: 1200px) {
     padding: 2rem;
   }
+  @media screen and (max-width: 650px) {
+    margin: 0rem 1rem;
+    margin-bottom: 1rem;
+  }
 `;

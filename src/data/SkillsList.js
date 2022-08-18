@@ -59,14 +59,14 @@ export const SkillsList = [
   },
   {
     skillName: "qt",
-    category: "développement, framework/bibliothèque",
+    category: "développement, framework",
     niveau: "avancé",
     logo: logoQt,
     link: null,
   },
   {
     skillName: "reactjs",
-    category: "développement, framework/bibliothèque",
+    category: "développement, framework",
     niveau: "intermédiaire",
     logo: logoReact,
     link: null,

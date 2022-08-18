@@ -6,7 +6,7 @@ function Portfolio() {
   return (
     <div className="portfolio">
       <div>
-        <ul className="project-list">
+        <div className="project-list">
           {ProjectList.map(
             ({ name, type, langage, category, videolink, id }) => {
               if (id === "videoconnectinnov") {
@@ -64,7 +64,7 @@ function Portfolio() {
               }
             }
           )}
-        </ul>
+        </div>
       </div>
     </div>
   );

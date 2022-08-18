@@ -1,12 +1,8 @@
 $width: 360px;
 $height: 200px;
 
-.project-item-content {
-    position: relative;
-}
-
 .project-item {
-    margin: 1rem .25rem;
+    margin: 1rem 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -89,6 +85,10 @@ $height: 200px;
     margin-top: .5rem;
     background-color: rgb(28, 28, 26);
     z-index: 2;
+    font-family: "Saira";
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
 }
 
 .project-item::before {
@@ -104,7 +104,7 @@ $height: 200px;
     transform: translate(100%, 0%);
     border-top-left-radius: 80%;
     border-top-right-radius: 80%;
-    transition: all .6s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .project-item:hover::before {
@@ -130,7 +130,7 @@ $height: 200px;
     left: 0px;
     top: 0px;
     transform: translate(0%, -100%);
-    transition: all .6s ease-in-out;
+    transition: all .4s ease-in-out;
     opacity: .7;
 }
 

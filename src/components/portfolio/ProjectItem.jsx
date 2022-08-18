@@ -14,16 +14,15 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
       >
         <img src={cover} alt="project-cover" height="200px" width="360px" />
         <Title>{name}</Title>
-      </Container>
 
-      {/* {info ? (
-        <div className="project-content">
-          <span className="category">{category}</span>
-          <span className="type">{type}</span>
-          <span className="langage">{langage}</span>
-          <span className="desc">{""}</span>
-        </div>
-      ) : null} */}
+        {info ? (
+          <Tags>
+            {category.map((el) => {
+              return <Tag>{el}</Tag>;
+            })}
+          </Tags>
+        ) : null}
+      </Container>
     </Fragment>
   );
 }
@@ -31,9 +30,33 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
 export default ProjectItem;
 
 //STYLE
+const Tag = styled.span`
+  border-radius: 10px;
+  background-color: #4c436e;
+
+  height: fit-content;
+  padding: 2px 10px;
+  margin: 0px 1px;
+  color: white;
+`;
+
+const Tags = styled.div`
+  position: absolute;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: row;
+
+  width: auto;
+  height: 56px;
+  bottom: 0px;
+  right: 2px;
+
+  font-size: 12px;
+`;
 
 const Container = styled.div`
-  margin: 2rem 1rem;
+  margin: 1rem 1rem;
   border-radius: 10px;
   width: 360px;
   height: 200px;
@@ -42,10 +65,6 @@ const Container = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 0;
-
-  /* background-image: url();
-  background-position: center;
-  background-size: cover; */
 
   &:hover {
     transition: all 0.4s ease-in-out;

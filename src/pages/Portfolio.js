@@ -8,20 +8,12 @@ function Portfolio() {
       <div>
         <div className="project-list">
           {ProjectList.map(
-            ({ name, type, langage, category, videolink, id, cover }) => {
-              if (id === "videoconnectinnov" || id === "tiktactoe") {
+            ({ name, type, langage, category, videolink, id, cover, url }) => {
+              if (url) {
                 return (
-                  <a
-                    key={id}
-                    href={videolink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="nav-item"
-                  >
+                  <a key={id} href={url} target="_blank" rel="noreferrer">
                     <ProjectItem
                       name={name}
-                      type={type}
-                      langage={langage}
                       category={category}
                       videolink={videolink}
                       cover={cover}
@@ -30,11 +22,9 @@ function Portfolio() {
                 );
               } else {
                 return (
-                  <Link key={id} className="nav-item" to={"/portfolio/" + id}>
+                  <Link key={id} to={"/portfolio/" + id}>
                     <ProjectItem
                       name={name}
-                      type={type}
-                      langage={langage}
                       category={category}
                       videolink={videolink}
                       cover={cover}

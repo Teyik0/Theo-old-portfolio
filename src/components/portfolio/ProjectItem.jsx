@@ -30,6 +30,11 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
 export default ProjectItem;
 
 //STYLE
+const size = `width: 360px;
+height: 200px;`;
+const size2 = `width: 320px;
+height: 160px;`;
+
 const Tag = styled.span`
   border-radius: 10px;
   background-color: #4c436e;
@@ -58,8 +63,7 @@ const Tags = styled.div`
 const Container = styled.div`
   margin: 1rem 1rem;
   border-radius: 10px;
-  width: 360px;
-  height: 200px;
+  ${size};
   cursor: pointer;
 
   overflow: hidden;
@@ -77,8 +81,7 @@ const Container = styled.div`
     content: "";
     position: absolute;
     background-color: rgb(117, 161, 161);
-    width: 360px;
-    height: 200px;
+    ${size}
     transform: translate(100%, 0%);
     border-top-left-radius: 80%;
     border-top-right-radius: 80%;
@@ -104,8 +107,7 @@ const Container = styled.div`
     background-size: 20%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 360px;
-    height: 200px;
+    ${size}
     left: 0px;
     top: 0px;
     transform: translate(100%, 0%);
@@ -117,8 +119,13 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 650px) {
-    width: 320px;
-    height: 160px;
+    ${size2};
+    &:before {
+      ${size2};
+    }
+    &:after {
+      ${size2};
+    }
   }
 `;
 

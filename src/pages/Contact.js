@@ -8,7 +8,9 @@ function Contact() {
       <div className="contact">
         <div className="email">
           <img src={logoMail} alt="mail" width="100px" height="100px" />
-          <span>sat.theo.fr@icloud.com</span>
+          <a href="mailto:sat.theo.fr@icloud.com?subject=contact">
+            <span>sat.theo.fr@icloud.com</span>
+          </a>
         </div>
         <div className="linkedin">
           <img src={logoLinkedin} alt="linkedin" width="100px" height="100px" />

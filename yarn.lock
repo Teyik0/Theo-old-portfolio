@@ -3975,6 +3975,11 @@ electron-to-chromium@^1.4.188:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.199.tgz#e0384fde79fdda89880e8be58196a9153e04db3b"
   integrity sha512-WIGME0Cs7oob3mxsJwHbeWkH0tYkIE/sjkJ8ML2BYmuRcjhRl/q5kVDXG7W9LOOKwzPU5M0LBlXRq9rlSgnNlg==
 
+emailjs@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/emailjs/-/emailjs-4.0.1.tgz#963533d07bf41b90bc5e7651b99464bd01129dfd"
+  integrity sha512-rTN/LDvlqwU79E367ovB7FIziImzimhQcZiGmC20VcDPbf0mv3l9c3aavtMcEFaFBsycjGB5aMIhz4ZbKNeLWw==
+
 emittery@^0.10.2:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.10.2.tgz#902eec8aedb8c41938c46e9385e9db7e03182933"
@@ -9695,6 +9700,7 @@ website@./:
     "@testing-library/jest-dom" "^5.16.4"
     "@testing-library/react" "^13.3.0"
     "@testing-library/user-event" "^13.5.0"
+    axios "^0.27.2"
     node-sass "^7.0.1"
     react "^18.2.0"
     react-dom "^18.2.0"

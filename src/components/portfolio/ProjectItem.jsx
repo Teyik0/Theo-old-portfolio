@@ -12,7 +12,7 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
         onMouseOverCapture={() => setInfo(true)}
         onMouseOutCapture={() => setInfo(false)}
       >
-        <img src={cover} alt="project-cover" height="200px" width="360px" />
+        <Cover src={cover} alt={`project : ${name}`} />
         <Title>{name}</Title>
 
         {info ? (
@@ -30,10 +30,17 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
 export default ProjectItem;
 
 //STYLE
-const size = `width: 360px;
-height: 200px;`;
+const size = `width: 380px;
+height: 220px;`;
 const size2 = `width: 320px;
 height: 160px;`;
+
+const Cover = styled.img`
+  ${size}
+  @media screen and (max-width: 650px) {
+    ${size2};
+  }
+`;
 
 const Tag = styled.span`
   border-radius: 10px;

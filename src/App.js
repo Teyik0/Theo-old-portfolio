@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import Robotsuiveur from "./pages/Robotsuiveur";
-import Laserpourchat from "./pages/Laserpourchat";
-import ListX from "./pages/ListX";
+import Robotsuiveur from "./pages/projects/Robotsuiveur";
+import Laserpourchat from "./pages/projects/Laserpourchat";
+import ListX from "./pages/projects/ListX";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";

@@ -30,7 +30,10 @@ const Container = styled.nav`
   flex-direction: row;
   justify-content: center;
   padding: 1.5rem;
-  background-color: rgb(24, 25, 25);
+  background-color: rgb(16, 17, 17);
+  margin: 0rem 1rem;
+  margin-top: 1rem;
+  border-radius: 20px;
 
   @media screen and (max-width: 650px) {
     display: flex;

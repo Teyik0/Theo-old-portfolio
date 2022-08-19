@@ -14,8 +14,12 @@ function Contact() {
   return (
     <Container>
       <IconButton onClick={() => setMailPop(true)}>
-        <a target="_top" href="mailto:sat.theo.fr@gmail.com" rel="noreferrer">
-          <Icon icon={emailIcon} text="sat.theo.fr@icloud.com" link="" />
+        <a
+          target="_top"
+          href="mailto:theosamarasinghe@gmail.com"
+          rel="noreferrer"
+        >
+          <Icon icon={emailIcon} text="theosamarasinghe@gmail.com" link="" />
         </a>
       </IconButton>
       <IconButton>

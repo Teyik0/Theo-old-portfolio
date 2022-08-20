@@ -7,25 +7,25 @@ import enSavoirPlusIcon from "../../assets/ajouter.png";
 function ProjectItem({ name, category, cover, slug }) {
   const [info, setInfo] = useState(false);
 
-  return (
-    <Link to={slug}>
-      <Container
-        onMouseOverCapture={() => setInfo(true)}
-        onMouseOutCapture={() => setInfo(false)}
-      >
-        <Cover src={cover} alt={`project : ${name}`} />
-        <Title>{name}</Title>
+  const projectItem = (
+    <Container
+      onMouseOverCapture={() => setInfo(true)}
+      onMouseOutCapture={() => setInfo(false)}
+    >
+      <Cover src={cover} alt={`project : ${name}`} />
+      <Title>{name}</Title>
 
-        {info ? (
-          <Tags>
-            {category.map((el, index) => {
-              return <Tag key={name + index}>{el}</Tag>;
-            })}
-          </Tags>
-        ) : null}
-      </Container>
-    </Link>
+      {info ? (
+        <Tags>
+          {category.map((el, index) => {
+            return <Tag key={name + index}>{el}</Tag>;
+          })}
+        </Tags>
+      ) : null}
+    </Container>
   );
+
+  return <Link to={`/portfolio/${slug}`}>{projectItem}</Link>;
 }
 
 export default ProjectItem;

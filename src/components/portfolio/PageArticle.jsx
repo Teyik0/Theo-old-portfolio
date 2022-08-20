@@ -10,7 +10,6 @@ function PageArticle({
   date,
   category,
   cover,
-  images,
   videolink,
   url,
   content,
@@ -27,11 +26,18 @@ function PageArticle({
         />
         {videolink ? (
           <Fragment>
-            <VideoTitle>Vidéo de présentation</VideoTitle>
+            <Title>Vidéo de présentation</Title>
             <Video>
               <ReactPlayer url={videolink} width="100%" controls={true} />
             </Video>
           </Fragment>
+        ) : null}
+        {url ? (
+          <a href={url} target="_blank" rel="noreferrer">
+            <Title>Lien</Title>
+            <br />
+            <span className="url">{url}</span>
+          </a>
         ) : null}
       </ArticleContainer>
       <SidePannel>
@@ -44,19 +50,20 @@ function PageArticle({
 
 export default PageArticle;
 
-//STYLE
-// const ImageSlider = styled.div`
-//   width: 420px;
-//   border-radius: 20px;
-//   background-color: #313334;
-//   margin: 3rem 0rem;
-// `;
-
 const SidePannel = styled.div`
   margin-left: 1rem;
+  @media screen and (max-width: 1150px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0rem;
+  }
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
-const VideoTitle = styled.span`
+const Title = styled.span`
   font-family: "Saira";
   text-transform: uppercase;
   font-size: 14px;
@@ -79,6 +86,15 @@ const ArticleContainer = styled.div`
   width: 60%;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
+  .url {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 900px) {
+    margin-bottom: -2rem;
+  }
 `;
 
 const Container = styled.div`

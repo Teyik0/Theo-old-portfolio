@@ -1,13 +1,14 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import enSavoirPlusIcon from "../../assets/ajouter.png";
 
-function ProjectItem({ name, type, langage, category, id, cover }) {
+function ProjectItem({ name, category, cover, slug }) {
   const [info, setInfo] = useState(false);
 
   return (
-    <Fragment>
+    <Link to={slug}>
       <Container
         onMouseOverCapture={() => setInfo(true)}
         onMouseOutCapture={() => setInfo(false)}
@@ -17,26 +18,29 @@ function ProjectItem({ name, type, langage, category, id, cover }) {
 
         {info ? (
           <Tags>
-            {category.map((el) => {
-              return <Tag>{el}</Tag>;
+            {category.map((el, index) => {
+              return <Tag key={name + index}>{el}</Tag>;
             })}
           </Tags>
         ) : null}
       </Container>
-    </Fragment>
+    </Link>
   );
 }
 
 export default ProjectItem;
 
 //STYLE
-const size = `width: 380px;
-height: 220px;`;
+const size = `width: 360px;
+height: 200px;`;
 const size2 = `width: 320px;
 height: 160px;`;
 
 const Cover = styled.img`
   ${size}
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   @media screen and (max-width: 650px) {
     ${size2};
   }
@@ -79,7 +83,7 @@ const Container = styled.div`
 
   &:hover {
     transition: all 0.4s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
 
   &:before {

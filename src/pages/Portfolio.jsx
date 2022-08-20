@@ -1,40 +1,22 @@
 import ProjectItem from "../components/portfolio/ProjectItem";
 import { ProjectList } from "../data/ProjectList";
-import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
 function Portfolio() {
   return (
     <Container>
-      {ProjectList.map(
-        ({ name, type, langage, category, videolink, id, cover, url }) => {
-          if (url) {
-            return (
-              <a key={id} href={url} target="_blank" rel="noreferrer">
-                <ProjectItem
-                  name={name}
-                  category={category}
-                  videolink={videolink}
-                  cover={cover}
-                />
-              </a>
-            );
-          } else {
-            return (
-              <Link key={id} to={"/portfolio/" + id}>
-                <ProjectItem
-                  name={name}
-                  category={category}
-                  videolink={videolink}
-                  cover={cover}
-                  key={id}
-                />
-              </Link>
-            );
-          }
-        }
-      )}
+      {ProjectList.map(({ name, category, slug, cover }) => {
+        return (
+          <ProjectItem
+            key={slug}
+            name={name}
+            category={category}
+            cover={cover}
+            slug={slug}
+          />
+        );
+      })}
     </Container>
   );
 }

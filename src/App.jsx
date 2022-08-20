@@ -1,13 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import Robotsuiveur from "./pages/projects/Robotsuiveur";
-import Laserpourchat from "./pages/projects/Laserpourchat";
-import ListX from "./pages/projects/ListX";
-import AboutMe from "./pages/AboutMe";
-import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+import ProjectArticle from "./components/portfolio/ProjectArticle";
 
 function App() {
   return (
@@ -16,9 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="qui-suis-je" element={<AboutMe />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="portfolio/robotsuiveur" element={<Robotsuiveur />} />
-        <Route path="portfolio/laserpourchat" element={<Laserpourchat />} />
-        <Route path="portfolio/listx" element={<ListX />} />
+        <Route path="portfolio/:projectid" element={<ProjectArticle />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<Home />} />
       </Route>

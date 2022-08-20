@@ -19,7 +19,7 @@ const Block = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0rem 3rem;
-  width: 200px;
+  width: 300px;
   height: 200px;
 `;
 

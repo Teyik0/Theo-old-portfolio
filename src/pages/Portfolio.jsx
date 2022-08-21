@@ -28,8 +28,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  margin: 0rem 0rem;
-  margin-top: 1rem;
+  justify-content: center;
+  margin: 1rem 1rem;
+  padding: 1rem 0rem;
+  background-color: #20204237;
+  box-shadow: 0px 0px 20px 1px black;
+  border-radius: 20px;
 `;

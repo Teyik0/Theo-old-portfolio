@@ -13,8 +13,11 @@ import { Pagination } from "swiper";
 
 import { ProjectList } from "../../data/ProjectList";
 import ProjectItem from "./ProjectItem";
+import { useEffect } from "react";
 
 function Slider({ option, title }) {
+  useEffect(() => {}, [title]);
+
   return (
     <Container>
       <Title>
@@ -33,16 +36,18 @@ function Slider({ option, title }) {
         {ProjectList.map(({ name, category, slug, cover, img }) => {
           /* AFFICHAGE DU SLIDER DE PROJET */
           if (option === "project") {
-            return (
-              <SwiperSlide key={slug + name}>
-                <ProjectItem
-                  name={name}
-                  category={category}
-                  cover={cover}
-                  slug={slug}
-                />
-              </SwiperSlide>
-            );
+            if (name !== title) {
+              return (
+                <SwiperSlide key={slug + name}>
+                  <ProjectItem
+                    name={name}
+                    category={category}
+                    cover={cover}
+                    slug={slug}
+                  />
+                </SwiperSlide>
+              );
+            }
           }
           /* AFFICHAGE DU SLIDER D'IMAGE DU PROJET */
           if (option === "images") {

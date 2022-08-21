@@ -44,7 +44,7 @@ const Tags = styled.div`
     border-radius: 10px;
     background-color: #4c436e;
     padding: 2px 10px;
-    margin: 0rem 2px;
+    margin: 2px 2px;
 
     font-family: "Saira";
     text-transform: uppercase;
@@ -65,7 +65,7 @@ const Info = styled.div`
   letter-spacing: 2px;
   margin: 0.25rem 0rem;
 
-  p {
-    margin: 0.1rem 0rem;
+  span {
+    margin: 0.5rem 0rem;
   }
 `;

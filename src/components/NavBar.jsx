@@ -15,6 +15,9 @@ export default function NavBar() {
         <Link to="portfolio">
           <Font>Portfolio</Font>
         </Link>
+        <Link to="cv">
+          <Font>CV</Font>
+        </Link>
         <Link to="contact">
           <Font>Contact</Font>
         </Link>

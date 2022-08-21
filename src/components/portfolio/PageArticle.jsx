@@ -41,7 +41,7 @@ function PageArticle({
         ) : null}
       </ArticleContainer>
       <SidePannel>
-        <Slider option="project" />
+        <Slider title={title} option="project" />
         <Slider title={title} option="images" />
       </SidePannel>
     </Container>

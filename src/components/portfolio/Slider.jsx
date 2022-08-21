@@ -13,56 +13,59 @@ import { Pagination } from "swiper";
 
 import { ProjectList } from "../../data/ProjectList";
 import ProjectItem from "./ProjectItem";
-import { useEffect } from "react";
 
 function Slider({ option, title }) {
-  useEffect(() => {}, [title]);
-
   return (
     <Container>
       <Title>
         {option === "project" ? "Autres Projets" : "Images du projet"}
       </Title>
-      <Swiper
-        loop={true}
-        slidesPerView={2}
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {ProjectList.map(({ name, category, slug, cover, img }) => {
-          /* AFFICHAGE DU SLIDER DE PROJET */
-          if (option === "project") {
-            if (name !== title) {
-              return (
-                <SwiperSlide key={slug + name}>
-                  <ProjectItem
-                    name={name}
-                    category={category}
-                    cover={cover}
-                    slug={slug}
-                  />
-                </SwiperSlide>
-              );
-            }
-          }
-          /* AFFICHAGE DU SLIDER D'IMAGE DU PROJET */
-          if (option === "images") {
-            if (name === title) {
-              return img.map((img, index) => {
+      {
+        <Swiper
+          loop={true}
+          slidesPerView={2}
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {ProjectList.map(({ name, category, slug, cover, img }) => {
+            /* AFFICHAGE DU SLIDER DE PROJET */
+            if (option === "project") {
+              if (name !== title) {
                 return (
-                  <SwiperSlide key={slug + index}>
-                    <img className="slider-image" src={img} alt="projectimg" />
+                  <SwiperSlide key={slug + name}>
+                    <ProjectItem
+                      name={name}
+                      category={category}
+                      cover={cover}
+                      slug={slug}
+                    />
                   </SwiperSlide>
                 );
-              });
+              }
+            }
+            /* AFFICHAGE DU SLIDER D'IMAGE DU PROJET */
+            if (option === "images") {
+              if (name === title) {
+                return img.map((img, index) => {
+                  return (
+                    <SwiperSlide key={slug + index}>
+                      <img
+                        className="slider-image"
+                        src={img}
+                        alt="projectimg"
+                      />
+                    </SwiperSlide>
+                  );
+                });
+              } else return null;
             } else return null;
-          } else return null;
-        })}
-      </Swiper>
+          })}
+        </Swiper>
+      }
     </Container>
   );
 }

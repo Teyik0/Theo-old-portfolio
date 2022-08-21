@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { ProjectList } from "../../data/ProjectList";
 import PageArticle from "./PageArticle";
 
-const empty = { name: "" };
+const empty = { test: "" };
 
 function ProjectArticle() {
   const params = useParams();
@@ -29,7 +29,7 @@ function ProjectArticle() {
 
   return (
     <Container>
-      {isData ? (
+      {isData && (
         <PageArticle
           title={data.name}
           date={data.date}
@@ -40,7 +40,7 @@ function ProjectArticle() {
           content={data.content}
           images={data.img}
         />
-      ) : null}
+      )}
     </Container>
   );
 }

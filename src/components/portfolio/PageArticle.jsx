@@ -26,19 +26,27 @@ function PageArticle({
         />
         {videolink ? (
           <Fragment>
-            <Title>Vidéo de présentation</Title>
+            <Title className="videotitle">Vidéo de présentation</Title>
             <Video>
               <ReactPlayer url={videolink} width="100%" controls={true} />
             </Video>
           </Fragment>
         ) : null}
-        {url ? (
-          <a href={url} target="_blank" rel="noreferrer">
-            <Title>Lien</Title>
-            <br />
-            <span className="url">{url}</span>
-          </a>
-        ) : null}
+
+        {url && (
+          <Title className="link">{url.length > 1 ? "liens" : "lien"}</Title>
+        )}
+        {url
+          ? url.map((el) => {
+              return (
+                <li key={el}>
+                  <a href={el} target="_blank" rel="noreferrer">
+                    <span className="url">{el}</span>
+                  </a>
+                </li>
+              );
+            })
+          : null}
       </ArticleContainer>
       <SidePannel>
         <Slider title={title} option="project" />
@@ -73,6 +81,7 @@ const Title = styled.span`
 
 const Video = styled.div`
   width: 100%;
+  margin-bottom: 1rem;
   iframe {
     border-radius: 20px;
   }
@@ -88,6 +97,15 @@ const ArticleContainer = styled.div`
   margin-bottom: 1rem;
   .url {
     font-size: 14px;
+  }
+  .link {
+    margin: 0rem 0rem;
+  }
+  li {
+    margin-left: 1rem;
+  }
+  .videotitle {
+    margin-top: 0rem;
   }
   @media screen and (max-width: 1150px) {
     width: 100%;

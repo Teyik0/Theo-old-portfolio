@@ -18,10 +18,22 @@ import coverSiteWebTheo from "../assets/projets/siteweb/sitewebtheo.webp";
 import imgSiteWebTheo1 from "../assets/projets/siteweb/sitewebtheo.png";
 import coverTicTacToe from "../assets/projets/tictactoe/tictactoe.png";
 
+import tablekids1 from "../assets/projets/tablekids/tablekids1.jpg";
+import tablekids2 from "../assets/projets/tablekids/tablekids2.jpg";
+import tablekids3 from "../assets/projets/tablekids/tablekids3.jpg";
+import tablekids4 from "../assets/projets/tablekids/tablekids4.jpg";
+import tablekids5 from "../assets/projets/tablekids/tablekids5.jpg";
+import tablekids6 from "../assets/projets/tablekids/tablekids6.jpg";
+import connectinnov from "../assets/projets/tablekids/connectinnov.png";
+
 import {
   contentRobotSuiveur,
   contentLaserPourChat,
   contentListX,
+  contentVCI,
+  contentTWS,
+  contentTicTacToe,
+  contentTableKids,
 } from "./Content";
 
 export const ProjectList = [
@@ -70,8 +82,9 @@ export const ProjectList = [
     category: ["premiere pro", "vidéo"],
     cover: coverMontageCI,
     img: [coverMontageCI, imgMontageCI1],
-    videolink: "https://www.youtube.com/watch?v=JS38BR8cu88",
-    url: null,
+    videolink: "https://www.youtube.com/watch?v=h57uSeSdCok",
+    url: ["https://www.youtube.com/watch?v=h57uSeSdCok"],
+    content: contentVCI,
   },
   {
     slug: "this-web-site",
@@ -81,7 +94,11 @@ export const ProjectList = [
     cover: coverSiteWebTheo,
     img: [coverSiteWebTheo, imgSiteWebTheo1],
     videolink: null,
-    url: "https://www.theosamarasinghe.fr/",
+    url: [
+      "https://www.theosamarasinghe.fr/",
+      "https://github.com/Teyik0/Theo-Website",
+    ],
+    content: contentTWS,
   },
   {
     slug: "tic-tac-toe",
@@ -91,6 +108,32 @@ export const ProjectList = [
     cover: coverTicTacToe,
     img: [coverTicTacToe],
     videolink: null,
-    url: "https://complete-tictactoe-game.netlify.app/",
+    url: [
+      "https://complete-tictactoe-game.netlify.app/",
+      "https://github.com/Teyik0/tictactoe",
+    ],
+    content: contentTicTacToe,
+  },
+  {
+    slug: "table-kids",
+    name: "Table Kid's",
+    date: "Avril 2022 - Août 2022",
+    category: ["électronique", "android"],
+    cover: tablekids1,
+    img: [
+      tablekids1,
+      tablekids2,
+      tablekids3,
+      tablekids4,
+      tablekids5,
+      tablekids6,
+      connectinnov,
+    ],
+    videolink: "https://www.youtube.com/watch?v=VYwuDQXRGmU",
+    url: [
+      "https://www.connectinnov.com/table-tactile-enfant.php",
+      "https://table-kids.fr/",
+    ],
+    content: contentTableKids,
   },
 ];

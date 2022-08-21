@@ -27,6 +27,22 @@ const Content = styled.div`
   p {
     margin: 1rem 0rem;
   }
+  span {
+    font-family: "Saira";
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 1rem 0rem;
+  }
+  .img {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 60%;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 const Cover = styled.img`

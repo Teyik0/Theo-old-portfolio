@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 import SkillsContainer from "../components/home/SkillsContainer";
 import Presentation from "../components/home/Presentation";
@@ -9,7 +10,9 @@ import CoverImgSmall from "../assets/cover-mobile.webp";
 function Home() {
   return (
     <PageContainer className="home">
-      <Cover />
+      <Fade duration={3000}>
+        <Cover />
+      </Fade>
       <SkillsContainer />
       <Presentation />
     </PageContainer>

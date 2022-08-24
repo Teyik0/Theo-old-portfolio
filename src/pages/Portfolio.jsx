@@ -1,20 +1,23 @@
+import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+
 import ProjectItem from "../components/portfolio/ProjectItem";
 import { ProjectList } from "../data/ProjectList";
-
-import styled from "styled-components";
 
 function Portfolio() {
   return (
     <Container>
-      {ProjectList.map(({ name, category, slug, cover }) => {
+      {ProjectList.map(({ name, category, slug, cover }, index) => {
         return (
-          <ProjectItem
-            key={slug}
-            name={name}
-            category={category}
-            cover={cover}
-            slug={slug}
-          />
+          <Fade bottom delay={index * 200}>
+            <ProjectItem
+              key={slug}
+              name={name}
+              category={category}
+              cover={cover}
+              slug={slug}
+            />
+          </Fade>
         );
       })}
     </Container>

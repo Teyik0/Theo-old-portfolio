@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 import SkillItem from "./SkillItem";
 import { SkillsList } from "../../data/SkillsList";
@@ -7,31 +7,45 @@ import { SkillsList } from "../../data/SkillsList";
 function SkillsContainer() {
   return (
     <Container>
-      <h3>Compétences</h3>
+      <Fade top>
+        <h3>Compétences</h3>
+      </Fade>
+
       <SkillList>
-        {SkillsList.map(({ skillName, logo, category, niveau, link }) => {
-          if (link) {
-            return (
-              <a href={link} target="_blank" rel="noreferrer" key={skillName}>
-                <SkillItem
-                  skillName={skillName}
-                  logo={logo}
-                  category={category}
-                  niveau={niveau}
-                />
-              </a>
-            );
-          } else
-            return (
-              <SkillItem
-                key={skillName}
-                skillName={skillName}
-                logo={logo}
-                category={category}
-                niveau={niveau}
-              />
-            );
-        })}
+        {SkillsList.map(
+          ({ skillName, logo, category, niveau, link }, index) => {
+            if (link) {
+              return (
+                <Fade bottom>
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={skillName}
+                  >
+                    <SkillItem
+                      skillName={skillName}
+                      logo={logo}
+                      category={category}
+                      niveau={niveau}
+                    />
+                  </a>
+                </Fade>
+              );
+            } else
+              return (
+                <Fade bottom delay={index * 30}>
+                  <SkillItem
+                    key={skillName}
+                    skillName={skillName}
+                    logo={logo}
+                    category={category}
+                    niveau={niveau}
+                  />
+                </Fade>
+              );
+          }
+        )}
       </SkillList>
     </Container>
   );
@@ -42,6 +56,7 @@ export default SkillsContainer;
 //STYLE
 const Container = styled.div`
   background-color: rgb(37, 38, 39);
+  padding: 0.1rem;
   margin: 1rem 1rem;
   border-radius: 20px;
   h3 {

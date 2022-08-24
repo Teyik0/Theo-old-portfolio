@@ -1,27 +1,41 @@
+import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+
 import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
-import styled from "styled-components";
 
 export default function NavBar() {
   return (
     <Fragment>
-      <Container>
-        <Link to="/">
-          <Font>Accueil</Font>
-        </Link>
-        <Link to="qui-suis-je">
-          <Font>Qui suis-je ?</Font>
-        </Link>
-        <Link to="portfolio">
-          <Font>Portfolio</Font>
-        </Link>
-        <Link to="cv">
-          <Font>CV</Font>
-        </Link>
-        <Link to="contact">
-          <Font>Contact</Font>
-        </Link>
-      </Container>
+      <Fade>
+        <Container>
+          <Fade top>
+            <Link to="/">
+              <Font>Accueil</Font>
+            </Link>
+          </Fade>
+          <Fade top delay={100}>
+            <Link to="qui-suis-je">
+              <Font>Qui suis-je ?</Font>
+            </Link>
+          </Fade>
+          <Fade top delay={200}>
+            <Link to="portfolio">
+              <Font>Portfolio</Font>
+            </Link>
+          </Fade>
+          <Fade top delay={300}>
+            <Link to="cv">
+              <Font>CV</Font>
+            </Link>
+          </Fade>
+          <Fade top delay={400}>
+            <Link to="contact">
+              <Font>Contact</Font>
+            </Link>
+          </Fade>
+        </Container>
+      </Fade>
       <Outlet />
     </Fragment>
   );

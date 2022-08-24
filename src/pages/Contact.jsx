@@ -1,5 +1,6 @@
-import { useState } from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import { useState } from "react";
 
 import Icon from "../components/contact/Icon";
 
@@ -13,25 +14,31 @@ function Contact() {
 
   return (
     <Container>
-      <IconButton onClick={() => setMailPop(true)}>
-        <a
-          target="_top"
-          href="mailto:theosamarasinghe@gmail.com"
-          rel="noreferrer"
-        >
-          <Icon icon={emailIcon} text="theosamarasinghe@gmail.com" link="" />
-        </a>
-      </IconButton>
-      <IconButton>
-        <a
-          href="https://www.linkedin.com/in/th%C3%A9o-samarasinghe/?originalSubdomain=fr"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon icon={linkedinIcon} text="LinkedIn" />
-        </a>
-      </IconButton>
-      <Icon icon={telephoneIcon} text="06 98 75 54 79" link="" />
+      <Fade bottom>
+        <IconButton onClick={() => setMailPop(true)}>
+          <a
+            target="_top"
+            href="mailto:theosamarasinghe@gmail.com"
+            rel="noreferrer"
+          >
+            <Icon icon={emailIcon} text="theosamarasinghe@gmail.com" link="" />
+          </a>
+        </IconButton>
+      </Fade>
+      <Fade bottom delay={300}>
+        <IconButton>
+          <a
+            href="https://www.linkedin.com/in/th%C3%A9o-samarasinghe/?originalSubdomain=fr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Icon icon={linkedinIcon} text="LinkedIn" />
+          </a>
+        </IconButton>
+      </Fade>
+      <Fade bottom delay={600}>
+        <Icon icon={telephoneIcon} text="06 98 75 54 79" link="" />
+      </Fade>
 
       {/* {mailPop ? <MailPop></MailPop> : null} */}
     </Container>

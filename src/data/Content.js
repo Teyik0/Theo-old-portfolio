@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import connectinnov from "../assets/projets/tablekids/connectinnov.png";
+import { Fragment } from 'react';
+import connectinnov from '../assets/projets/tablekids/connectinnov.png';
 
 export const contentRobotSuiveur = (
   <Fragment>
@@ -207,8 +207,8 @@ export const contentTableKids = (
       leur site web. Voici ci-dessous une image qui sera plus représentative que
       des mots.
     </p>
-    <div className="img">
-      <img src={connectinnov} alt="Produits de Connect Innov" />
+    <div className='img'>
+      <img src={connectinnov} alt='Produits de Connect Innov' />
     </div>
     <span>Présentation de la Table Kid's</span>
     <p>
@@ -222,6 +222,66 @@ export const contentTableKids = (
       Ainsi, Connect innov réinvente l’espace enfants pour offrir aux
       professionnels et à leur clients (petits et grands), un moment agréable en
       magasin, grâce à un produit ludique et de qualité.
+    </p>
+  </Fragment>
+);
+
+export const contentSrikaStore = (
+  <Fragment>
+    <p>
+      Nouveau projet, et pas des moindres, un site de ecommerce. J'ai appris
+      beaucoup de nouvelle chose et ainsi j'ai aggrandi mon stack.
+    </p>
+    <span>Stack</span>
+    <p>
+      Pour ce projet, j'ai tout d'abord utilisé le framework NextJS, ce
+      framework est un incoutournable pour programmer avec React, il est
+      puissant et permet une utilisation simple des APIs et le chargement des
+      pages plus efficaces qu'avec une simple application React classique.
+    </p>
+    <p>
+      Ensuite, pour ce projet, j'ai appris le langage Typescript qui est
+      incoutournable également. Il permet de typer les variables. Au premier
+      abord, j'ai eu l'impression que Typescript complexifiait mon programme
+      mais ce langage est très utile pour se rendre compte ou se trouve nos
+      erreurs. De ce fait, on ne passe pas 3h à trouver une erreur bête dans le
+      programme.
+    </p>
+    <p>
+      Côté UI, j'ai appris le framework Tailwind de plus en plus populaire grâce
+      à son efficacité remarquable. Ce framework permet d'augmenter la vitesse
+      d'écriture du css et facilite le responsive.
+    </p>
+    <p>
+      Ensuite, au niveau des librairies, j'ai utilisé Zustand qui permet de
+      faire à la manière de Redux une gestion des variables en globales et d'y
+      avoir accès n'importe où dans le programme. Cependant Zustand est bien
+      plus simple et efficace en terme de prise en main que Redux.
+    </p>
+    <p>
+      Pour le backend, j'ai utilisé Sanity qui permet très facilement de créer
+      un backend sans connaissance des langages SQL ou PHP et facilite
+      grandement la programmation et permet de gagner un temps fou. De plus
+      Sanity utilise GROQ pour les appels au niveau de l'API. GROQ est un
+      langage de query similaire à GraphQL mais plus simple d'utilisation.
+    </p>
+    <p>
+      Enfin, pour les paiements j'ai utilisé la librairie Stripe, qui permet
+      d'intégrer les paiements au site web très facilement.
+    </p>
+    <span>Qu'est-ce qu'il reste à faire ?</span>
+    <p>
+      Ce projet n'est actuellement pas complet. En effet, il reste le responsive
+      à faire, rajouter la possibilité à l'utilisateur de créer un compte et
+      quelques pages d'informations à programmer. De plus les images utilisé
+      sont très arbitraire et certaines pas transparente mais j'ai rempli mes
+      objectifs avec ce site. Je pense désormais avoir des bases solides en
+      développement web. Ainsi, je vais me tourner vers ce que je souhaitais
+      faire dès le départ, c'est à dire faire des projets web3.
+    </p>
+    <p>
+      Bien sur, je n'abandonne pas l'idée de terminer ce site un jour, mais ce
+      n'est pour l'instant pas mon objectif ni ma priorité.
     </p>
   </Fragment>
 );

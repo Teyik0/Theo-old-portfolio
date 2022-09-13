@@ -158,7 +158,7 @@ export const ProjectList = [
     cover: SKStore1,
     img: [SKStore1, SKStore2, SKStore3, SKStore4, SKStore5],
     videolink: null,
-    url: null,
+    url: ['https://github.com/Teyik0/srika-store'],
     content: contentSrikaStore,
   },
 ];
